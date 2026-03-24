@@ -4,36 +4,44 @@ import { useState } from 'react';
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle, sending, sent, error
+  const [status, setStatus] = useState('idle');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
 
-    try {
-      // Using Web3Forms - free, no signup needed for basic use
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'YOUR_KEY_HERE',
-          name: form.name,
-          email: form.email,
-          message: form.message,
-          subject: `Portfolio Contact: ${form.name}`,
-        }),
-      });
+    const apiKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
-      if (res.ok) {
-        setStatus('sent');
-        setForm({ name: '', email: '', message: '' });
-        setTimeout(() => setStatus('idle'), 4000);
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
+    if (apiKey && apiKey !== 'YOUR_KEY_HERE') {
+      // Use Web3Forms if key is configured
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: apiKey,
+            name: form.name,
+            email: form.email,
+            message: form.message,
+            subject: `Portfolio Contact: ${form.name}`,
+          }),
+        });
+        if (res.ok) {
+          setStatus('sent');
+          setForm({ name: '', email: '', message: '' });
+          setTimeout(() => setStatus('idle'), 4000);
+          return;
+        }
+      } catch {}
     }
+
+    // Fallback: open mailto with pre-filled content
+    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
+    window.open(`mailto:hpant.data@gmail.com?subject=${subject}&body=${body}`, '_self');
+    setStatus('sent');
+    setForm({ name: '', email: '', message: '' });
+    setTimeout(() => setStatus('idle'), 4000);
   };
 
   return (
@@ -76,7 +84,6 @@ export default function ContactForm() {
       <button type="submit" className="btn btn-primary form-submit" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending...' : status === 'sent' ? '✓ Message Sent!' : 'Send Message'}
       </button>
-      {status === 'error' && <p className="form-error">Something went wrong. Try emailing directly at hpant.data@gmail.com</p>}
     </form>
   );
 }

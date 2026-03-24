@@ -56,7 +56,7 @@ const EXPERIENCE = [
     company: 'Futurense Technologies',
     period: 'Oct 2021 – Jul 2022',
     location: 'Bangalore, India · Remote',
-    domain: 'Banking & Financial Services',
+    domain: 'Healthcare',
     tech: ['Azure Databricks', 'Apache Spark', 'PySpark', 'SAS', 'SQL', 'S3'],
     bullets: [
       'Led migration of 50 legacy SAS batch workflows to Spark on Azure Databricks for financial services clients',
