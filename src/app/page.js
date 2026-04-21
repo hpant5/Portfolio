@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { track } from '@vercel/analytics';
 import Reveal from '@/components/Reveal';
 import ProjectCarousel from '@/components/ProjectCarousel';
 import ContactForm from '@/components/ContactForm';
@@ -186,7 +187,7 @@ export default function Home() {
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-resume"><DownloadIcon /> Resume</a></li>
+          <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-resume" onClick={() => track('resume_download', { location: 'nav' })}><DownloadIcon /> Resume</a></li>
         </ul>
       </nav>
 
@@ -208,7 +209,7 @@ export default function Home() {
         <Reveal delay={0.2}>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">Get in Touch</a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary"><DownloadIcon /> Resume</a>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" onClick={() => track('resume_download', { location: 'hero' })}><DownloadIcon /> Resume</a>
           </div>
         </Reveal>
         <Reveal delay={0.26}>
@@ -322,7 +323,7 @@ export default function Home() {
                 <a href="https://www.linkedin.com/in/itshimanshup/" target="_blank" rel="noopener noreferrer" className="contact-link-item"><LIIcon /> linkedin.com/in/itshimanshup</a>
                 <a href="https://github.com/hpant5" target="_blank" rel="noopener noreferrer" className="contact-link-item"><GHIcon /> github.com/hpant5</a>
               </div>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ marginTop: 20 }}><DownloadIcon /> Download Resume</a>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ marginTop: 20 }} onClick={() => track('resume_download', { location: 'contact' })}><DownloadIcon /> Download Resume</a>
             </div>
           </Reveal>
           <Reveal delay={0.12}>
