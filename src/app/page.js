@@ -10,18 +10,18 @@ import ContactForm from '@/components/ContactForm';
 
 const EXPERIENCE = [
   {
-    title: 'Backend & AI Developer — Internship',
+    title: 'Backend & AI Developer',
     company: 'MyEdMaster',
     companyNote: 'US-based EdTech Company (Virginia)',
-    period: 'Jan 2025 – Present',
+    period: 'Jan 2026 – Apr 2026',
     location: 'Remote',
     domain: 'Legal Tech / AI',
-    current: true,
-    tech: ['Python', 'LangChain', 'Vector DB', 'Multi-Agent Systems', 'LLM', 'RAG'],
+    current: false,
+    tech: ['Python', 'LangChain', 'LangGraph', 'Vector DB', 'Multi-Agent Systems', 'FastAPI', 'RAG'],
     bullets: [
-      'Building an Agentic RAG system with deep personalization that provides accessible legal guidance for underserved users who cannot afford traditional counsel',
-      'Designed multi-agent pipeline where specialized agents collaborate independently — handling query refinement, document retrieval, and response generation',
-      'Architecting backend infrastructure and an interactive interface that helps users understand their legal options with confidence',
+      'Built production multi-agent RAG system for personalized legal guidance — engineered LangGraph orchestration pipeline with Qdrant vector DB, achieving sub-2s query latency across 10K+ legal documents',
+      'Designed data ingestion and transformation pipelines converting unstructured legal corpora into structured vector embeddings, achieving 95% relevance accuracy',
+      'Architected FastAPI + Node.js backend integrating vector DB lookups, session state management, and multi-turn conversation history supporting 100+ concurrent sessions',
     ],
   },
   {
@@ -91,10 +91,11 @@ const TECH_STACK = {
 };
 
 const ACHIEVEMENTS = [
-  { icon: '🏆', title: 'DEVLABS Hackathon — 1st Place', desc: 'Won with MeetFlow — intelligent task orchestration converting meeting transcripts into capacity-aware ticket assignments using LLM-powered analysis.' },
+  { icon: '🎓', title: 'Microsoft Certified: Fabric Analytics Engineer (DP-700)', desc: 'Earned Microsoft Certified: Fabric Analytics Engineer Associate certification — demonstrating expertise in modern data platforms, OneLake architecture, and end-to-end analytics pipelines.' },
+  { icon: '🏆', title: 'DEVHACKS 2026 — 1st Place', desc: 'Won 1st Place (100+ teams) with MeetFlow — intelligent meeting orchestration converting transcripts into capacity-aware Jira/Taiga assignments using GPT-4o analysis.' },
   { icon: '🏆', title: 'HackASU — FairCharge', desc: 'Built a medical bill audit pipeline at HackASU that uses Claude Vision + SapBERT to detect overcharges, flagging $1,300+ in average billing errors per hospital bill.' },
   { icon: '🏅', title: 'SPOT Award — Exceptional Delivery', desc: 'Recognized at Super Six Sports Gaming for exceptional delivery and cross-team collaboration on critical product features.' },
-  { icon: '🎓', title: 'M.S. Software Engineering (AI)', desc: 'Pursuing AI specialization at Arizona State University — researching agentic RAG systems and multi-agent architectures.' },
+  { icon: '🎓', title: 'M.S. Software Engineering (AI)', desc: 'Completed AI specialization at Arizona State University (May 2026) — building agentic RAG systems and multi-agent architectures.' },
 ];
 
 const PROJECTS = [
@@ -204,7 +205,7 @@ export default function Home() {
           </div>
         </Reveal>
         <Reveal delay={0.12}>
-          <p className="hero-sub">Software Engineer with 5+ years in data & backend engineering. Currently pursuing my M.S. in Software Engineering (AI Specialization) at ASU and working as a Backend & AI Developer at MyEdMaster, building agentic AI systems with deep personalization.</p>
+          <p className="hero-sub">Data Engineer with 3+ years building scalable ETL/ELT pipelines and cloud-native data platforms. Recently completed M.S. in Software Engineering (AI Specialization) at ASU. Currently seeking Data Engineering roles where I can build production systems that scale.</p>
         </Reveal>
         <Reveal delay={0.2}>
           <div className="hero-actions">
@@ -228,15 +229,15 @@ export default function Home() {
         <div className="about-grid">
           <div>
             <Reveal delay={0.08}>
-              <p className="about-text">I've spent 5+ years designing backend systems, data pipelines, and distributed architectures across healthcare, sports analytics, insurance, and banking. Now I'm sharpening that foundation with an M.S. focused on AI at ASU.</p>
-              <p className="about-text">Currently interning at <strong>MyEdMaster</strong>, a US-based company (Virginia), as a Backend & AI Developer — building an Agentic RAG system with deep personalization that provides accessible legal guidance. Because everyone deserves answers, not just those who can afford a lawyer.</p>
+              <p className="about-text">I've spent 3+ years building scalable data pipelines and distributed architectures across healthcare, sports analytics, and insurance. Recently completed my M.S. in Software Engineering (AI Specialization) at ASU, focusing on agentic RAG systems and multi-agent architectures.</p>
+              <p className="about-text">Most recently worked at <strong>MyEdMaster</strong> (US-based EdTech, Virginia) as a Backend & AI Developer — building an Agentic RAG system with deep personalization that provides accessible legal guidance. Because everyone deserves answers, not just those who can afford a lawyer.</p>
             </Reveal>
             <Reveal delay={0.14}>
               <div className="domains">{DOMAINS.map((d) => (<span key={d.name} className="domain-chip">{d.icon} {d.name}</span>))}</div>
             </Reveal>
           </div>
           <div className="stats">
-            <Reveal delay={0.1}><div className="stat"><div className="stat-num">5+</div><div className="stat-label">Years Experience</div></div></Reveal>
+            <Reveal delay={0.1}><div className="stat"><div className="stat-num">3+</div><div className="stat-label">Years Experience</div></div></Reveal>
             <Reveal delay={0.14}><div className="stat"><div className="stat-num">M.S.</div><div className="stat-label">Software Engineering (AI) — ASU</div></div></Reveal>
           </div>
         </div>
@@ -320,7 +321,7 @@ export default function Home() {
               <p className="about-text">I'm looking for SWE, Backend Engineering, and Data Engineering roles. If you're building something interesting, I'd love to hear about it.</p>
               <div className="contact-links-list">
                 <a href="mailto:hpant.data@gmail.com" className="contact-link-item"><MailIcon /> hpant.data@gmail.com</a>
-                <a href="https://www.linkedin.com/in/itshimanshup/" target="_blank" rel="noopener noreferrer" className="contact-link-item"><LIIcon /> linkedin.com/in/itshimanshup</a>
+                <a href="https://www.linkedin.com/in/himanshupant-de/" target="_blank" rel="noopener noreferrer" className="contact-link-item"><LIIcon /> linkedin.com/in/himanshupant-de</a>
                 <a href="https://github.com/hpant5" target="_blank" rel="noopener noreferrer" className="contact-link-item"><GHIcon /> github.com/hpant5</a>
               </div>
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ marginTop: 20 }} onClick={() => track('resume_download', { location: 'contact' })}><DownloadIcon /> Download Resume</a>
