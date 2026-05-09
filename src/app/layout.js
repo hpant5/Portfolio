@@ -2,14 +2,14 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
-  title: 'Himanshu Pant — Software Engineer',
+  title: 'Himanshu Pant — Data Engineer | AI & Infrastructure',
   description:
-    'Software Engineer with 5+ years in data & backend engineering. M.S. in Software Engineering (AI) at ASU. Building systems that scale.',
+    'Data Engineer specializing in large-scale ETL/ELT pipelines, real-time data infrastructure, and AI/ML systems. Built production platforms processing 100M-1B records with 66-86% performance improvements.',
   metadataBase: new URL('https://himanshupant.dev'),
   openGraph: {
-    title: 'Himanshu Pant — Software Engineer',
+    title: 'Himanshu Pant — Data Engineer | AI & Infrastructure',
     description:
-      'Software Engineer with 5+ years in data & backend engineering. Building systems that scale.',
+      'Data Engineer specializing in large-scale data pipelines, real-time systems, and AI/ML infrastructure. Processing 100M-1B records at scale.',
     url: 'https://himanshupant.dev',
     siteName: 'Himanshu Pant',
     locale: 'en_US',
@@ -17,9 +17,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Himanshu Pant — Software Engineer',
+    title: 'Himanshu Pant — Data Engineer | AI & Infrastructure',
     description:
-      'Software Engineer with 5+ years in data & backend engineering. Building systems that scale.',
+      'Data Engineer specializing in large-scale data pipelines, real-time systems, and AI/ML infrastructure. Processing 100M-1B records at scale.',
   },
   robots: {
     index: true,

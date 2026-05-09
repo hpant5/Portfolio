@@ -10,18 +10,18 @@ import ContactForm from '@/components/ContactForm';
 
 const EXPERIENCE = [
   {
-    title: 'Backend & AI Developer',
+    title: 'AI Engineer',
     company: 'MyEdMaster',
     companyNote: 'US-based EdTech Company (Virginia)',
     period: 'Jan 2026 – Apr 2026',
     location: 'Remote',
     domain: 'Legal Tech / AI',
     current: false,
-    tech: ['Python', 'LangChain', 'LangGraph', 'Vector DB', 'Multi-Agent Systems', 'FastAPI', 'RAG'],
+    tech: ['Python', 'LangChain', 'Vector DB', 'Multi-Agent Systems', 'LLM', 'RAG'],
     bullets: [
-      'Built production multi-agent RAG system for personalized legal guidance — engineered LangGraph orchestration pipeline with Qdrant vector DB, achieving sub-2s query latency across 10K+ legal documents',
-      'Designed data ingestion and transformation pipelines converting unstructured legal corpora into structured vector embeddings, achieving 95% relevance accuracy',
-      'Architected FastAPI + Node.js backend integrating vector DB lookups, session state management, and multi-turn conversation history supporting 100+ concurrent sessions',
+      'Built multi-agent RAG system for personalized legal guidance — created LangGraph orchestration pipeline with Qdrant vector DB, achieving sub-2s query latency across 10K+ legal documents',
+      'Designed data ingestion and transformation pipelines converting unstructured legal corpora into structured, queryable vector embeddings with real-time personalization signals via LLM APIs, achieving 95% relevance accuracy',
+      'Built FastAPI + Node.js backend integrating vector DB lookups, session state management, and multi-turn conversation history, supporting 100+ concurrent sessions with <200ms response time',
     ],
   },
   {
@@ -91,11 +91,11 @@ const TECH_STACK = {
 };
 
 const ACHIEVEMENTS = [
-  { icon: '🎓', title: 'Microsoft Certified: Fabric Analytics Engineer (DP-700)', desc: 'Earned Microsoft Certified: Fabric Analytics Engineer Associate certification — demonstrating expertise in modern data platforms, OneLake architecture, and end-to-end analytics pipelines.' },
-  { icon: '🏆', title: 'DEVHACKS 2026 — 1st Place', desc: 'Won 1st Place (100+ teams) with MeetFlow — intelligent meeting orchestration converting transcripts into capacity-aware Jira/Taiga assignments using GPT-4o analysis.' },
+  { icon: '🏆', title: 'DEVHACKS 2026 — 1st Place', desc: 'Won Track 1 with MeetFlow — intelligent task orchestration converting meeting transcripts into capacity-aware ticket assignments using LLM-powered analysis, competing against 100+ teams.' },
+  { icon: '📜', title: 'Microsoft Certified: Fabric Analytics Engineer', desc: 'Passed DP-700 (May 2026) — validated expertise in Microsoft Fabric analytics engineering, data warehousing, and cloud data solutions.' },
   { icon: '🏆', title: 'HackASU — FairCharge', desc: 'Built a medical bill audit pipeline at HackASU that uses Claude Vision + SapBERT to detect overcharges, flagging $1,300+ in average billing errors per hospital bill.' },
   { icon: '🏅', title: 'SPOT Award — Exceptional Delivery', desc: 'Recognized at Super Six Sports Gaming for exceptional delivery and cross-team collaboration on critical product features.' },
-  { icon: '🎓', title: 'M.S. Software Engineering (AI)', desc: 'Completed AI specialization at Arizona State University (May 2026) — building agentic RAG systems and multi-agent architectures.' },
+  { icon: '🎓', title: 'M.S. Software Engineering', desc: 'Arizona State University — Data Science Minor — 2026. Focus on AI/ML infrastructure, distributed systems, and agentic architectures.' },
 ];
 
 const PROJECTS = [
@@ -205,7 +205,7 @@ export default function Home() {
           </div>
         </Reveal>
         <Reveal delay={0.12}>
-          <p className="hero-sub">Data Engineer with 3+ years building scalable ETL/ELT pipelines and cloud-native data platforms. Recently completed M.S. in Software Engineering (AI Specialization) at ASU. Currently seeking Data Engineering roles where I can build production systems that scale.</p>
+          <p className="hero-sub">Data Engineer specializing in large-scale ETL/ELT pipelines, real-time data infrastructure, and AI/ML systems. Built production platforms processing 100M-1B records with 66-86% performance improvements across insurance, sports analytics, and healthcare domains.</p>
         </Reveal>
         <Reveal delay={0.2}>
           <div className="hero-actions">
@@ -229,16 +229,16 @@ export default function Home() {
         <div className="about-grid">
           <div>
             <Reveal delay={0.08}>
-              <p className="about-text">I've spent 3+ years building scalable data pipelines and distributed architectures across healthcare, sports analytics, and insurance. Recently completed my M.S. in Software Engineering (AI Specialization) at ASU, focusing on agentic RAG systems and multi-agent architectures.</p>
-              <p className="about-text">Most recently worked at <strong>MyEdMaster</strong> (US-based EdTech, Virginia) as a Backend & AI Developer — building an Agentic RAG system with deep personalization that provides accessible legal guidance. Because everyone deserves answers, not just those who can afford a lawyer.</p>
+              <p className="about-text">Data Engineer with expertise in large-scale data infrastructure, real-time processing, and AI/ML systems. I've migrated 1B+ records to distributed architectures, eliminated 90-minute production bottlenecks, and built real-time pipelines handling 500K+ daily events with 99.9% accuracy.</p>
+              <p className="about-text">Track record of rapid impact across insurance, sports analytics, and healthcare — promoted within 6 months at Super Six and received SPOT Recognition Award for delivering critical data infrastructure under tight deadlines.</p>
             </Reveal>
             <Reveal delay={0.14}>
               <div className="domains">{DOMAINS.map((d) => (<span key={d.name} className="domain-chip">{d.icon} {d.name}</span>))}</div>
             </Reveal>
           </div>
           <div className="stats">
-            <Reveal delay={0.1}><div className="stat"><div className="stat-num">3+</div><div className="stat-label">Years Experience</div></div></Reveal>
-            <Reveal delay={0.14}><div className="stat"><div className="stat-num">M.S.</div><div className="stat-label">Software Engineering (AI) — ASU</div></div></Reveal>
+            <Reveal delay={0.1}><div className="stat"><div className="stat-num">100M-1B</div><div className="stat-label">Records Processed</div></div></Reveal>
+            <Reveal delay={0.14}><div className="stat"><div className="stat-num">M.S.</div><div className="stat-label">Software Engineering, Data Science Minor — ASU</div></div></Reveal>
           </div>
         </div>
         <Reveal delay={0.1}><h3 className="subsection-title">Tech I work with</h3></Reveal>
@@ -318,7 +318,7 @@ export default function Home() {
         <div className="contact-grid">
           <Reveal delay={0.06}>
             <div className="contact-info">
-              <p className="about-text">I'm looking for SWE, Backend Engineering, and Data Engineering roles. If you're building something interesting, I'd love to hear about it.</p>
+              <p className="about-text">Open to Data Engineer, ML Engineer, and Backend Engineer roles focused on large-scale data infrastructure, real-time systems, and AI/ML platforms. Willing to relocate anywhere in the US for the right opportunity.</p>
               <div className="contact-links-list">
                 <a href="mailto:hpant.data@gmail.com" className="contact-link-item"><MailIcon /> hpant.data@gmail.com</a>
                 <a href="https://www.linkedin.com/in/himanshupant-de/" target="_blank" rel="noopener noreferrer" className="contact-link-item"><LIIcon /> linkedin.com/in/himanshupant-de</a>
