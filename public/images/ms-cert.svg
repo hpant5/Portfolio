@@ -1,0 +1,7 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#0078D4" rx="20"/>
+  <text x="100" y="90" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Microsoft</text>
+  <text x="100" y="115" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" alignment-baseline="middle">Fabric Analytics</text>
+  <text x="100" y="135" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" alignment-baseline="middle">Engineer</text>
+  <text x="100" y="155" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle" alignment-baseline="middle">Associate</text>
+</svg>

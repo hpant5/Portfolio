@@ -95,8 +95,7 @@ const CERTIFICATIONS = [
     title: 'AWS Certified Data Engineer – Associate',
     issuer: 'Amazon Web Services',
     code: 'DEA-C01',
-    date: 'Jan 2025',
-    badge: '/images/aws-dea-badge.png',
+    badge: '/images/aws-cert.png',
     verify: '#', // Replace with your Credly link
     desc: 'Validated expertise in designing, building, and maintaining data pipelines using AWS services including Glue, EMR, Redshift, Kinesis, and implementing data quality frameworks at scale.'
   },
@@ -104,8 +103,7 @@ const CERTIFICATIONS = [
     title: 'Microsoft Certified: Fabric Analytics Engineer Associate',
     issuer: 'Microsoft',
     code: 'DP-700',
-    date: 'May 2026',
-    badge: '/images/ms-dp700-badge.png',
+    badge: '/images/ms-cert.png',
     verify: '#', // Replace with your Microsoft Learn credentials link
     desc: 'Certified in Microsoft Fabric analytics engineering, data warehousing, data modeling, and implementing end-to-end analytics solutions on Azure cloud platform.'
   }
@@ -113,7 +111,7 @@ const CERTIFICATIONS = [
 
 const ACHIEVEMENTS = [
   { icon: '🏆', title: 'DEVHACKS 2026 — 1st Place', desc: 'Won Track 1 with MeetFlow — intelligent task orchestration converting meeting transcripts into capacity-aware ticket assignments using LLM-powered analysis, competing against 100+ teams.' },
-  { icon: '☁️', title: 'AWS Certified Data Engineer Associate', desc: 'Passed DEA-C01 (Jan 2025) — validated expertise in data pipeline design, ETL optimization, AWS Glue/EMR/Redshift, and implementing data quality frameworks at scale.' },
+  { icon: '☁️', title: 'AWS Certified Data Engineer Associate', desc: 'Passed DEA-C01 (May 2026) — validated expertise in data pipeline design, ETL optimization, AWS Glue/EMR/Redshift, and implementing data quality frameworks at scale.' },
   { icon: '📊', title: 'Microsoft Certified: Fabric Analytics Engineer', desc: 'Passed DP-700 (May 2026) — validated expertise in Microsoft Fabric analytics engineering, data warehousing, and cloud data solutions.' },
   { icon: '🏆', title: 'HackASU — FairCharge', desc: 'Built a medical bill audit pipeline at HackASU that uses Claude Vision + SapBERT to detect overcharges, flagging $1,300+ in average billing errors per hospital bill.' },
   { icon: '🏅', title: 'SPOT Award — Exceptional Delivery', desc: 'Recognized at Super Six Sports Gaming for exceptional delivery and cross-team collaboration on critical product features.' },
@@ -307,7 +305,7 @@ export default function Home() {
                 </div>
                 <div className="cert-content">
                   <h4 className="cert-title">{cert.title}</h4>
-                  <p className="cert-meta">{cert.issuer} • {cert.code} • {cert.date}</p>
+                  <p className="cert-meta">{cert.issuer} • {cert.code}</p>
                   <p className="cert-desc">{cert.desc}</p>
                   {cert.verify !== '#' && (
                     <a href={cert.verify} target="_blank" rel="noopener noreferrer" className="cert-verify-link">
