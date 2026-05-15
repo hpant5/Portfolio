@@ -143,16 +143,25 @@ body {
   flex: 1;
 }
 
+.hero-name {
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--t1);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
 .hero-tag {
   font-size: 13px;
   font-weight: 700;
   color: var(--primary);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-.hero h1 {
+.hero-headline {
   font-family: var(--display);
   font-size: clamp(42px, 6vw, 72px);
   line-height: 1.1;
