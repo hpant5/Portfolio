@@ -90,12 +90,33 @@ const TECH_STACK = {
   'Tools': ['Git', 'Power BI', 'Streamlit', 'Jira'],
 };
 
+const CERTIFICATIONS = [
+  {
+    title: 'AWS Certified Data Engineer – Associate',
+    issuer: 'Amazon Web Services',
+    code: 'DEA-C01',
+    date: 'Jan 2025',
+    badge: '/images/aws-dea-badge.png',
+    verify: '#', // Replace with your Credly link
+    desc: 'Validated expertise in designing, building, and maintaining data pipelines using AWS services including Glue, EMR, Redshift, Kinesis, and implementing data quality frameworks at scale.'
+  },
+  {
+    title: 'Microsoft Certified: Fabric Analytics Engineer Associate',
+    issuer: 'Microsoft',
+    code: 'DP-700',
+    date: 'May 2026',
+    badge: '/images/ms-dp700-badge.png',
+    verify: '#', // Replace with your Microsoft Learn credentials link
+    desc: 'Certified in Microsoft Fabric analytics engineering, data warehousing, data modeling, and implementing end-to-end analytics solutions on Azure cloud platform.'
+  }
+];
+
 const ACHIEVEMENTS = [
   { icon: '🏆', title: 'DEVHACKS 2026 — 1st Place', desc: 'Won Track 1 with MeetFlow — intelligent task orchestration converting meeting transcripts into capacity-aware ticket assignments using LLM-powered analysis, competing against 100+ teams.' },
-  { icon: '📜', title: 'Microsoft Certified: Fabric Analytics Engineer', desc: 'Passed DP-700 (May 2026) — validated expertise in Microsoft Fabric analytics engineering, data warehousing, and cloud data solutions.' },
+  { icon: '☁️', title: 'AWS Certified Data Engineer Associate', desc: 'Passed DEA-C01 (Jan 2025) — validated expertise in data pipeline design, ETL optimization, AWS Glue/EMR/Redshift, and implementing data quality frameworks at scale.' },
+  { icon: '📊', title: 'Microsoft Certified: Fabric Analytics Engineer', desc: 'Passed DP-700 (May 2026) — validated expertise in Microsoft Fabric analytics engineering, data warehousing, and cloud data solutions.' },
   { icon: '🏆', title: 'HackASU — FairCharge', desc: 'Built a medical bill audit pipeline at HackASU that uses Claude Vision + SapBERT to detect overcharges, flagging $1,300+ in average billing errors per hospital bill.' },
   { icon: '🏅', title: 'SPOT Award — Exceptional Delivery', desc: 'Recognized at Super Six Sports Gaming for exceptional delivery and cross-team collaboration on critical product features.' },
-  { icon: '🎓', title: 'M.S. Software Engineering', desc: 'Arizona State University — Data Science Minor — 2026. Focus on AI/ML infrastructure, distributed systems, and agentic architectures.' },
 ];
 
 const PROJECTS = [
@@ -266,6 +287,33 @@ export default function Home() {
                 <div>
                   <h4 className="achievement-title">{a.title}</h4>
                   <p className="achievement-desc">{a.desc}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <div className="divider"><hr /></div>
+      <section className="section" id="certifications">
+        <Reveal><p className="section-label">Certifications</p><h2 className="section-title">Industry Credentials.</h2></Reveal>
+        <div className="certs-grid">
+          {CERTIFICATIONS.map((cert, i) => (
+            <Reveal key={cert.title} delay={i * 0.1}>
+              <div className="cert-card">
+                <div className="cert-badge-container">
+                  <img src={cert.badge} alt={`${cert.title} badge`} className="cert-badge" onError={(e) => { e.target.style.display = 'none'; }} />
+                </div>
+                <div className="cert-content">
+                  <h4 className="cert-title">{cert.title}</h4>
+                  <p className="cert-meta">{cert.issuer} • {cert.code} • {cert.date}</p>
+                  <p className="cert-desc">{cert.desc}</p>
+                  {cert.verify !== '#' && (
+                    <a href={cert.verify} target="_blank" rel="noopener noreferrer" className="cert-verify-link">
+                      Verify Credential →
+                    </a>
+                  )}
                 </div>
               </div>
             </Reveal>
