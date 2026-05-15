@@ -215,7 +215,7 @@ export default function Home() {
             <img src="/images/profile.webp" alt="Himanshu Pant" className="hero-photo" />
             <div className="hero-text">
               <p className="hero-tag">AWS & Microsoft Certified Data Engineer</p>
-              <h1>I build things<br />that <em>scale.</em></h1>
+              <h1>Hi, I'm Himanshu Pant.<br />I build things that <em>scale.</em></h1>
               <AnimatedRole />
             </div>
           </div>
