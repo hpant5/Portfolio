@@ -5,6 +5,7 @@ import { track } from '@vercel/analytics';
 import Reveal from '@/components/Reveal';
 import ProjectCarousel from '@/components/ProjectCarousel';
 import ContactForm from '@/components/ContactForm';
+import AnimatedRole from '@/components/AnimatedRole';
 
 /* ══════════════════════════════════════════════ */
 
@@ -12,30 +13,28 @@ const EXPERIENCE = [
   {
     title: 'AI Engineer',
     company: 'MyEdMaster',
-    companyNote: 'US-based EdTech Company (Virginia)',
+    companyNote: 'Industry Capstone Project (ASU SER517)',
     period: 'Jan 2026 – Apr 2026',
     location: 'Remote',
     domain: 'Legal Tech / AI',
     current: false,
-    tech: ['Python', 'LangChain', 'Vector DB', 'Multi-Agent Systems', 'LLM', 'RAG'],
+    tech: ['Python', 'LangChain', 'LangGraph', 'Qdrant', 'FastAPI', 'Docker'],
     bullets: [
-      'Built multi-agent RAG system for personalized legal guidance — created LangGraph orchestration pipeline with Qdrant vector DB, achieving sub-2s query latency across 10K+ legal documents',
-      'Designed data ingestion and transformation pipelines converting unstructured legal corpora into structured, queryable vector embeddings with real-time personalization signals via LLM APIs, achieving 95% relevance accuracy',
-      'Built FastAPI + Node.js backend integrating vector DB lookups, session state management, and multi-turn conversation history, supporting 100+ concurrent sessions with <200ms response time',
+      'Developed multi-agent Stateful RAG system for personalized legal guidance using LangGraph with Qdrant vector DB, achieving sub-2s query latency across 10K+ documents and 95% relevance accuracy',
+      'Built FastAPI + Node.js backend with Docker supporting 100+ concurrent sessions with sub-200ms response time through optimized vector retrieval',
     ],
   },
   {
-    title: 'Consultant II — Analytics (Data Engineer)',
-    company: 'EXL',
+    title: 'Data Engineer II',
+    company: 'EXL Services',
     period: 'Jul 2023 – Mar 2024',
     location: 'Gurugram, India · Remote',
     domain: 'Insurance',
-    tech: ['PySpark', 'AWS EMR', 'Airflow', 'Snowflake', 'Great Expectations', 'Jenkins'],
+    tech: ['PySpark', 'AWS Glue', 'MWAA', 'Snowflake', 'S3', 'Great Expectations', 'CloudWatch'],
     bullets: [
-      'Cut PySpark ETL processing time by 66% (90 min → 30 min) on AWS EMR for insurance reporting stakeholders',
-      'Built automated data validation with Great Expectations across 5 insurance data sources, catching quality issues before downstream models',
-      'Orchestrated end-to-end Airflow workflows integrating APIs, databases, and S3 for underwriting ML models',
-      'Implemented CI/CD pipelines (Jenkins + Bitbucket) to streamline releases and reduce deployment friction',
+      'Drove 40% BI query performance improvement by architecting S3 data lake and Snowflake warehouse across 8 datasets supporting 500K+ daily users processing high-frequency insurance claim events',
+      'Eliminated 90-minute production bottleneck by optimizing PySpark ETL pipelines on AWS Glue/MWAA processing 100M records/batch, achieving 66% runtime reduction via partition pruning and Spark query optimization',
+      'Built production anomaly detection layer using Great Expectations across 15+ data sources with CloudWatch monitoring and MWAA retries, maintaining 100% SLAs',
     ],
   },
   {
@@ -44,12 +43,11 @@ const EXPERIENCE = [
     period: 'Aug 2022 – Jul 2023',
     location: 'Gurugram, India · On-site',
     domain: 'Sports Analytics',
-    tech: ['Python', 'PySpark', 'SQL', 'NoSQL', 'Machine Learning', 'Data Modeling'],
+    tech: ['Python', 'PySpark', 'SQL', 'MongoDB', 'Scikit-Learn', 'REST APIs'],
     bullets: [
-      'Designed and built the entire data infrastructure from scratch — data models, ingestion pipelines, and processing layers — serving as the foundation for all analytics and ML workloads',
-      'Developed and deployed a churn prediction model for new users, directly reducing churn and driving measurable improvements in retention and revenue',
-      'Built end-to-end pipelines (Python, PySpark, SQL) ingesting semi-structured data from APIs, logs, and NoSQL sources at scale',
-      'Automated data validation, monitoring, and unit testing frameworks, improving quality and reliability across the full pipeline',
+      'Reduced user churn 20% by building production ML retention pipeline with 78% accuracy using Scikit-Learn and statistical modeling that identified behavioral anomalies in time-series user activity data, deployed automated Python/SQL re-engagement campaigns',
+      'Built and owned core data ingestion layer — multi-source batch ETL pipelines ingesting from 10+ REST APIs and S3 using cloud data solutions, loading 500K+ daily records of football, soccer, and basketball data into MongoDB with sub-hourly refresh cadence, enabling near-real-time analytics for product and marketing teams with 99.9% data accuracy via cross-source validation and data profiling',
+      'Engineered ML feature pipelines with SCD Type 1/2 dimensional modeling and automated feature engineering, reducing ML experiment cycle time 35% through optimized time-series data storage patterns',
     ],
   },
   {
@@ -58,25 +56,23 @@ const EXPERIENCE = [
     period: 'Oct 2021 – Jul 2022',
     location: 'Bangalore, India · Remote',
     domain: 'Healthcare',
-    tech: ['Azure Databricks', 'Apache Spark', 'PySpark', 'SAS', 'SQL', 'S3'],
+    tech: ['Azure Databricks', 'Apache Spark', 'PySpark', 'AWS Athena', 'Python', 'SQL'],
     bullets: [
-      'Led migration of 50 legacy SAS batch workflows to Spark on Azure Databricks for financial services clients',
-      'Cut runtime from 6 hours to under 50 minutes (86% reduction) via partitioning, caching, and broadcast joins',
-      'Delivered zero-data-loss transition across all 50 workflows, resolving schema mismatches and validation gaps',
-      'Built automated data quality checks and transformation pipelines for downstream ML and reporting',
+      'Spearheaded migration of 1 Billion+ record oncology pipelines from legacy SAS to Apache Spark on Azure Databricks, achieving 86% reduction in batch processing time from 6+ hours to 50 minutes through broadcast joins and strategic partitioning',
+      'Automated bi-weekly HCP targeting reports by building Python ETL pipeline querying AWS Athena, reducing manual effort from 4–5 hours to 15 minutes, delivering 95% time savings',
+      'Delivered 99.5% data accuracy post-migration via comprehensive PySpark and SQL validation frameworks with statistical reconciliation',
     ],
   },
   {
-    title: 'Executive Analyst',
+    title: 'Data Analyst',
     company: 'Koron Projects Limited',
     period: 'Oct 2018 – Jul 2021',
     location: 'Gurugram, India · On-site',
     domain: 'Construction & Infrastructure',
-    tech: ['Power BI', 'SQL Server', 'Oracle', 'Python', 'Excel'],
+    tech: ['Power BI', 'SQL Server', 'Oracle', 'MySQL', 'Python', 'Excel'],
     bullets: [
-      'Built 15 Power BI dashboards providing real-time visibility across $50M+ in annual construction projects',
-      'Automated monthly reporting, replacing manual Excel workflows and saving 20 hours/month for finance stakeholders',
-      'Designed KPI dashboards tracking 50+ active projects, enabling leadership to identify delays and make faster decisions',
+      'Built and maintained 15 Power BI dashboards with advanced analytics for executive leadership tracking project costs, timelines, and profitability across $50M+ in annual construction projects',
+      'Consolidated cost data from multiple enterprise sources including SQL Server, Oracle, and MySQL via SQL queries and stored procedures, automating monthly executive reporting and reducing manual effort by 20 hours/month',
     ],
   },
 ];
@@ -96,7 +92,7 @@ const CERTIFICATIONS = [
     issuer: 'Amazon Web Services',
     code: 'DEA-C01',
     badge: '/images/aws-cert.png',
-    verify: '#', // Replace with your Credly link
+    verify: 'https://www.credly.com/badges/c5b61c24-e142-4d60-9c4d-238719926f2a/linked_in_profile',
     desc: 'Validated expertise in designing, building, and maintaining data pipelines using AWS services including Glue, EMR, Redshift, Kinesis, and implementing data quality frameworks at scale.'
   },
   {
@@ -104,7 +100,7 @@ const CERTIFICATIONS = [
     issuer: 'Microsoft',
     code: 'DP-700',
     badge: '/images/ms-cert.png',
-    verify: '#', // Replace with your Microsoft Learn credentials link
+    verify: 'https://learn.microsoft.com/en-us/users/himanshupant-1290/credentials/ed9a3de2acc4b9c6?ref=https%3A%2F%2Fwww.linkedin.com%2F',
     desc: 'Certified in Microsoft Fabric analytics engineering, data warehousing, data modeling, and implementing end-to-end analytics solutions on Azure cloud platform.'
   }
 ];
@@ -218,8 +214,9 @@ export default function Home() {
           <div className="hero-top">
             <img src="/images/profile.webp" alt="Himanshu Pant" className="hero-photo" />
             <div className="hero-text">
-              <p className="hero-tag">Himanshu Pant</p>
+              <p className="hero-tag">AWS & Microsoft Certified Data Engineer</p>
               <h1>I build things<br />that <em>scale.</em></h1>
+              <AnimatedRole />
             </div>
           </div>
         </Reveal>
@@ -257,7 +254,7 @@ export default function Home() {
           </div>
           <div className="stats">
             <Reveal delay={0.1}><div className="stat"><div className="stat-num">100M-1B</div><div className="stat-label">Records Processed</div></div></Reveal>
-            <Reveal delay={0.14}><div className="stat"><div className="stat-num">M.S.</div><div className="stat-label">Software Engineering, Data Science Minor — ASU</div></div></Reveal>
+            <Reveal delay={0.14}><div className="stat"><div className="stat-num">M.S.</div><div className="stat-label">Software Engineering (AI Specialization) — Arizona State University</div></div></Reveal>
           </div>
         </div>
         <Reveal delay={0.1}><h3 className="subsection-title">Tech I work with</h3></Reveal>
@@ -299,7 +296,7 @@ export default function Home() {
         <div className="certs-grid">
           {CERTIFICATIONS.map((cert, i) => (
             <Reveal key={cert.title} delay={i * 0.1}>
-              <div className="cert-card">
+              <a href={cert.verify} target="_blank" rel="noopener noreferrer" className="cert-card">
                 <div className="cert-badge-container">
                   <img src={cert.badge} alt={`${cert.title} badge`} className="cert-badge" onError={(e) => { e.target.style.display = 'none'; }} />
                 </div>
@@ -307,13 +304,8 @@ export default function Home() {
                   <h4 className="cert-title">{cert.title}</h4>
                   <p className="cert-meta">{cert.issuer} • {cert.code}</p>
                   <p className="cert-desc">{cert.desc}</p>
-                  {cert.verify !== '#' && (
-                    <a href={cert.verify} target="_blank" rel="noopener noreferrer" className="cert-verify-link">
-                      Verify Credential →
-                    </a>
-                  )}
                 </div>
-              </div>
+              </a>
             </Reveal>
           ))}
         </div>
