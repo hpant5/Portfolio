@@ -11,72 +11,66 @@ import AnimatedRole from '@/components/AnimatedRole';
 
 const EXPERIENCE = [
   {
-    title: 'AI Engineer',
+    title: 'Data & AI Engineer (Industry Capstone)',
     company: 'MyEdMaster',
-    companyNote: 'Industry Capstone Project (ASU SER517)',
     period: 'Jan 2026 – Apr 2026',
-    location: 'Remote',
-    domain: 'Legal Tech / AI',
-    current: false,
-    tech: ['Python', 'LangChain', 'LangGraph', 'Qdrant', 'FastAPI', 'Docker'],
+    location: 'Tempe, AZ',
+    tech: ['Python', 'LangGraph', 'Qdrant', 'FastAPI', 'Node.js', 'Docker'],
     bullets: [
-      'Developed multi-agent Stateful RAG system for personalized legal guidance using LangGraph with Qdrant vector DB, achieving sub-2s query latency across 10K+ documents and 95% relevance accuracy',
-      'Built FastAPI + Node.js backend with Docker supporting 100+ concurrent sessions with sub-200ms response time through optimized vector retrieval',
-    ],
+      'Developed multi-agent stateful RAG system for personalized legal guidance using LangGraph and Qdrant vector DB, achieving sub-2s query latency across 10K+ documents and 95% relevance accuracy[cite: 9]',
+      'Built FastAPI + Node.js backend with Docker supporting 100+ concurrent sessions at sub-200ms response time via optimized retrieval and a 5-node pipeline[cite: 9]',
+      'Authored evaluation framework for the QnA service and resolved critical production NameError in the agentic graph execution layer; shipped 4-layer technical documentation adopted by partner team[cite: 9]'
+    ]
   },
   {
-    title: 'Data Engineer II',
+    title: 'Consultant II, Data Analytics & Engineering',
     company: 'EXL Services',
     period: 'Jul 2023 – Mar 2024',
-    location: 'Gurugram, India · Remote',
-    domain: 'Insurance',
-    tech: ['PySpark', 'AWS Glue', 'MWAA', 'Snowflake', 'S3', 'Great Expectations', 'CloudWatch'],
+    location: 'Gurugram, India',
+    tech: ['PySpark', 'AWS Glue', 'MWAA', 'Snowflake', 'S3', 'Great Expectations', 'CloudWatch', 'Terraform', 'Jenkins'],
     bullets: [
-      'Drove 40% BI query performance improvement by architecting S3 data lake and Snowflake warehouse across 8 datasets supporting 500K+ daily users processing high-frequency insurance claim events',
-      'Eliminated 90-minute production bottleneck by optimizing PySpark ETL pipelines on AWS Glue/MWAA processing 100M records/batch, achieving 66% runtime reduction via partition pruning and Spark query optimization',
-      'Built production anomaly detection layer using Great Expectations across 15+ data sources with CloudWatch monitoring and MWAA retries, maintaining 100% SLAs',
-    ],
+      'Eliminated a 90-minute production bottleneck by optimizing PySpark ETL on AWS Glue / MWAA processing 100M+ records per batch, cutting runtimes 66% via partition pruning[cite: 9]',
+      'Architected S3 data lake and Snowflake warehouse across 8 datasets for 500K+ daily users on high-frequency insurance claim events, driving 40% BI query performance improvement[cite: 9]',
+      'Built production data quality framework using Great Expectations across 15+ data sources with CloudWatch monitoring, maintaining 100% SLA compliance[cite: 9]',
+      'Automated infrastructure provisioning by deploying Airflow DAGs via Terraform IaC and integrating Jenkins CI/CD with unit and integration testing[cite: 9]'
+    ]
   },
   {
     title: 'Data Engineer',
     company: 'Super Six Sports Gaming',
     period: 'Aug 2022 – Jul 2023',
-    location: 'Gurugram, India · On-site',
-    domain: 'Sports Analytics',
-    tech: ['Python', 'PySpark', 'SQL', 'MongoDB', 'Scikit-Learn', 'REST APIs'],
+    location: 'Gurugram, India',
+    tech: ['Python', 'SQL', 'PySpark', 'MongoDB', 'S3', 'REST APIs', 'Scikit-Learn'],
     bullets: [
-      'Reduced user churn 20% by building production ML retention pipeline with 78% accuracy using Scikit-Learn and statistical modeling that identified behavioral anomalies in time-series user activity data, deployed automated Python/SQL re-engagement campaigns',
-      'Built and owned core data ingestion layer — multi-source batch ETL pipelines ingesting from 10+ REST APIs and S3 using cloud data solutions, loading 500K+ daily records of football, soccer, and basketball data into MongoDB with sub-hourly refresh cadence, enabling near-real-time analytics for product and marketing teams with 99.9% data accuracy via cross-source validation and data profiling',
-      'Engineered ML feature pipelines with SCD Type 1/2 dimensional modeling and automated feature engineering, reducing ML experiment cycle time 35% through optimized time-series data storage patterns',
-    ],
+      'Built and owned the core data ingestion layer: multi-source batch ETL from 10+ REST APIs and S3, loading 500K+ daily records of sports event data into MongoDB with 99.9% accuracy[cite: 9]',
+      'Reduced user churn 20% by building a production ML retention pipeline (78% accuracy, Scikit-Learn) detecting behavioral anomalies in time-series user activity and triggering automated Python/SQL workflows[cite: 9]',
+      'Engineered ML feature pipelines with SCD Type 1/2 dimensional modeling, accelerating ML experiment cycle time by 35%[cite: 9]'
+    ]
   },
   {
     title: 'Associate Data Engineer',
     company: 'Futurense Technologies',
     period: 'Oct 2021 – Jul 2022',
-    location: 'Bangalore, India · Remote',
-    domain: 'Healthcare',
-    tech: ['Azure Databricks', 'Apache Spark', 'PySpark', 'AWS Athena', 'Python', 'SQL'],
+    location: 'Bangalore, India',
+    tech: ['Apache Spark', 'Azure Databricks', 'PySpark', 'Python', 'SQL', 'AWS Athena'],
     bullets: [
-      'Spearheaded migration of 1 Billion+ record oncology pipelines from legacy SAS to Apache Spark on Azure Databricks, achieving 86% reduction in batch processing time from 6+ hours to 50 minutes through broadcast joins and strategic partitioning',
-      'Automated bi-weekly HCP targeting reports by building Python ETL pipeline querying AWS Athena, reducing manual effort from 4–5 hours to 15 minutes, delivering 95% time savings',
-      'Delivered 99.5% data accuracy post-migration via comprehensive PySpark and SQL validation frameworks with statistical reconciliation',
-    ],
+      'Spearheaded migration of 1B+ record oncology pipelines from legacy SAS to Apache Spark on Azure Databricks, cutting batch time from 6+ hours to 50 minutes (86% reduction) via broadcast joins[cite: 9]',
+      'Automated bi-weekly HCP targeting reports via Python ETL on AWS Athena, reducing manual effort from 4-5 hours to 15 minutes (95% savings)[cite: 9]',
+      'Delivered 99.5% data accuracy post-migration via comprehensive PySpark + SQL validation frameworks with statistical reconciliation[cite: 9]'
+    ]
   },
   {
     title: 'Data Analyst',
     company: 'Koron Projects Limited',
     period: 'Oct 2018 – Jul 2021',
-    location: 'Gurugram, India · On-site',
-    domain: 'Construction & Infrastructure',
-    tech: ['Power BI', 'SQL Server', 'Oracle', 'MySQL', 'Python', 'Excel'],
+    location: 'New Delhi, India',
+    tech: ['Power BI', 'SQL Server', 'Oracle', 'MySQL', 'SQL'],
     bullets: [
-      'Built and maintained 15 Power BI dashboards with advanced analytics for executive leadership tracking project costs, timelines, and profitability across $50M+ in annual construction projects',
-      'Consolidated cost data from multiple enterprise sources including SQL Server, Oracle, and MySQL via SQL queries and stored procedures, automating monthly executive reporting and reducing manual effort by 20 hours/month',
-    ],
-  },
+      'Built 15 Power BI dashboards with advanced analytics for executive leadership tracking project costs, timelines, and profitability across $50M+ in annual construction projects[cite: 9]',
+      'Consolidated cost data from SQL Server, Oracle, and MySQL via SQL and stored procedures, removing 20 hours/month of manual effort[cite: 9]'
+    ]
+  }
 ];
-
 const TECH_STACK = {
   'Languages': ['Python', 'SQL', 'JavaScript', 'PySpark'],
   'Data & ML': ['Apache Spark', 'Databricks', 'Airflow', 'LangChain', 'Snowflake', 'Great Expectations'],
@@ -185,7 +179,6 @@ const DOMAINS = [
 const MailIcon = () => (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 4L12 13L2 4" /></svg>);
 const LIIcon = () => (<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>);
 const GHIcon = () => (<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg>);
-const DownloadIcon = () => (<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>);
 const BriefcaseIcon = () => (<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" /></svg>);
 
 export default function Home() {
@@ -203,7 +196,6 @@ export default function Home() {
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-resume" onClick={() => track('resume_download', { location: 'nav' })}><DownloadIcon /> Resume</a></li>
         </ul>
       </nav>
 
@@ -227,7 +219,6 @@ export default function Home() {
         <Reveal delay={0.2}>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">Get in Touch</a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" onClick={() => track('resume_download', { location: 'hero' })}><DownloadIcon /> Resume</a>
           </div>
         </Reveal>
         <Reveal delay={0.26}>
@@ -363,7 +354,6 @@ export default function Home() {
                 <a href="https://www.linkedin.com/in/himanshupant-de/" target="_blank" rel="noopener noreferrer" className="contact-link-item"><LIIcon /> linkedin.com/in/himanshupant-de</a>
                 <a href="https://github.com/hpant5" target="_blank" rel="noopener noreferrer" className="contact-link-item"><GHIcon /> github.com/hpant5</a>
               </div>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ marginTop: 20 }} onClick={() => track('resume_download', { location: 'contact' })}><DownloadIcon /> Download Resume</a>
             </div>
           </Reveal>
           <Reveal delay={0.12}>
