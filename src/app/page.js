@@ -17,9 +17,9 @@ const EXPERIENCE = [
     location: 'Tempe, AZ',
     tech: ['Python', 'LangGraph', 'Qdrant', 'FastAPI', 'Node.js', 'Docker'],
     bullets: [
-      'Developed multi-agent stateful RAG system for personalized legal guidance using LangGraph and Qdrant vector DB, achieving sub-2s query latency across 10K+ documents and 95% relevance accuracy[cite: 9]',
-      'Built FastAPI + Node.js backend with Docker supporting 100+ concurrent sessions at sub-200ms response time via optimized retrieval and a 5-node pipeline[cite: 9]',
-      'Authored evaluation framework for the QnA service and resolved critical production NameError in the agentic graph execution layer; shipped 4-layer technical documentation adopted by partner team[cite: 9]'
+      'Developed multi-agent stateful RAG system for personalized legal guidance using LangGraph and Qdrant vector DB, achieving sub-2s query latency across 10K+ documents and 95% relevance accuracy ',
+      'Built FastAPI + Node.js backend with Docker supporting 100+ concurrent sessions at sub-200ms response time via optimized retrieval and a 5-node pipeline ',
+      'Authored evaluation framework for the QnA service and resolved critical production NameError in the agentic graph execution layer; shipped 4-layer technical documentation adopted by partner team '
     ]
   },
   {
@@ -29,10 +29,10 @@ const EXPERIENCE = [
     location: 'Gurugram, India',
     tech: ['PySpark', 'AWS Glue', 'MWAA', 'Snowflake', 'S3', 'Great Expectations', 'CloudWatch', 'Terraform', 'Jenkins'],
     bullets: [
-      'Eliminated a 90-minute production bottleneck by optimizing PySpark ETL on AWS Glue / MWAA processing 100M+ records per batch, cutting runtimes 66% via partition pruning[cite: 9]',
-      'Architected S3 data lake and Snowflake warehouse across 8 datasets for 500K+ daily users on high-frequency insurance claim events, driving 40% BI query performance improvement[cite: 9]',
-      'Built production data quality framework using Great Expectations across 15+ data sources with CloudWatch monitoring, maintaining 100% SLA compliance[cite: 9]',
-      'Automated infrastructure provisioning by deploying Airflow DAGs via Terraform IaC and integrating Jenkins CI/CD with unit and integration testing[cite: 9]'
+      'Eliminated a 90-minute production bottleneck by optimizing PySpark ETL on AWS Glue / MWAA processing 100M+ records per batch, cutting runtimes 66% via partition pruning ',
+      'Architected S3 data lake and Snowflake warehouse across 8 datasets for 500K+ daily users on high-frequency insurance claim events, driving 40% BI query performance improvement ',
+      'Built production data quality framework using Great Expectations across 15+ data sources with CloudWatch monitoring, maintaining 100% SLA compliance',
+      'Automated infrastructure provisioning by deploying Airflow DAGs via Terraform IaC and integrating Jenkins CI/CD with unit and integration testing'
     ]
   },
   {
@@ -42,9 +42,9 @@ const EXPERIENCE = [
     location: 'Gurugram, India',
     tech: ['Python', 'SQL', 'PySpark', 'MongoDB', 'S3', 'REST APIs', 'Scikit-Learn'],
     bullets: [
-      'Built and owned the core data ingestion layer: multi-source batch ETL from 10+ REST APIs and S3, loading 500K+ daily records of sports event data into MongoDB with 99.9% accuracy[cite: 9]',
-      'Reduced user churn 20% by building a production ML retention pipeline (78% accuracy, Scikit-Learn) detecting behavioral anomalies in time-series user activity and triggering automated Python/SQL workflows[cite: 9]',
-      'Engineered ML feature pipelines with SCD Type 1/2 dimensional modeling, accelerating ML experiment cycle time by 35%[cite: 9]'
+      'Built and owned the core data ingestion layer: multi-source batch ETL from 10+ REST APIs and S3, loading 500K+ daily records of sports event data into MongoDB with 99.9% accuracy ',
+      'Reduced user churn 20% by building a production ML retention pipeline (78% accuracy, Scikit-Learn) detecting behavioral anomalies in time-series user activity and triggering automated Python/SQL workflows ',
+      'Engineered ML feature pipelines with SCD Type 1/2 dimensional modeling, accelerating ML experiment cycle time by 35% '
     ]
   },
   {
@@ -54,9 +54,9 @@ const EXPERIENCE = [
     location: 'Bangalore, India',
     tech: ['Apache Spark', 'Azure Databricks', 'PySpark', 'Python', 'SQL', 'AWS Athena'],
     bullets: [
-      'Spearheaded migration of 1B+ record oncology pipelines from legacy SAS to Apache Spark on Azure Databricks, cutting batch time from 6+ hours to 50 minutes (86% reduction) via broadcast joins[cite: 9]',
-      'Automated bi-weekly HCP targeting reports via Python ETL on AWS Athena, reducing manual effort from 4-5 hours to 15 minutes (95% savings)[cite: 9]',
-      'Delivered 99.5% data accuracy post-migration via comprehensive PySpark + SQL validation frameworks with statistical reconciliation[cite: 9]'
+      'Spearheaded migration of 1B+ record oncology pipelines from legacy SAS to Apache Spark on Azure Databricks, cutting batch time from 6+ hours to 50 minutes (86% reduction) via broadcast joins ',
+      'Automated bi-weekly HCP targeting reports via Python ETL on AWS Athena, reducing manual effort from 4-5 hours to 15 minutes (95% savings) ',
+      'Delivered 99.5% data accuracy post-migration via comprehensive PySpark + SQL validation frameworks with statistical reconciliation '
     ]
   },
   {
@@ -66,8 +66,8 @@ const EXPERIENCE = [
     location: 'New Delhi, India',
     tech: ['Power BI', 'SQL Server', 'Oracle', 'MySQL', 'SQL'],
     bullets: [
-      'Built 15 Power BI dashboards with advanced analytics for executive leadership tracking project costs, timelines, and profitability across $50M+ in annual construction projects[cite: 9]',
-      'Consolidated cost data from SQL Server, Oracle, and MySQL via SQL and stored procedures, removing 20 hours/month of manual effort[cite: 9]'
+      'Built 15 Power BI dashboards with advanced analytics for executive leadership tracking project costs, timelines, and profitability across $50M+ in annual construction projects ',
+      'Consolidated cost data from SQL Server, Oracle, and MySQL via SQL and stored procedures, removing 20 hours/month of manual effort '
     ]
   }
 ];
