@@ -302,7 +302,7 @@ export default function Home() {
         <div className="orb orb-b" />
         <Reveal>
           <div className="hero-top">
-            <img src="/images/Profile.webp" alt="Himanshu Pant" className="hero-photo" />
+            <img src="/images/profile.webp" alt="Himanshu Pant" className="hero-photo" />
             <div className="hero-text">
               <h1 className="hero-name">Himanshu Pant</h1>
               <p className="hero-tag">AWS & Microsoft Certified Data Engineer</p>
