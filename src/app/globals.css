@@ -841,6 +841,20 @@ body {
   padding-bottom: 48px;
 }
 
+.timeline-content {
+  background: var(--bg2);
+  border: 1px solid var(--bd);
+  border-radius: var(--r);
+  padding: 28px 30px;
+  transition: all 0.3s;
+}
+
+.timeline-content:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 32px var(--primary-glow);
+  transform: translateY(-4px);
+}
+
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -879,6 +893,19 @@ body {
   white-space: nowrap;
 }
 
+.job-note {
+  font-size: 14px;
+  color: var(--t2);
+  margin: 0 0 10px;
+  font-style: italic;
+}
+
+.job-location {
+  font-size: 14px;
+  color: var(--t3);
+  margin-bottom: 4px;
+}
+
 .timeline-desc {
   font-size: 15px;
   line-height: 1.7;
@@ -896,6 +923,13 @@ body {
   margin-bottom: 8px;
   color: var(--t2);
   line-height: 1.6;
+}
+
+.job-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
 }
 
 /* Project Carousel */
@@ -1221,5 +1255,18 @@ body {
   
   .carousel-arrow-l {
     left: 8px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timeline-date {
+    white-space: normal;
+  }
+
+  .timeline-content {
+    padding: 24px;
   }
 }
