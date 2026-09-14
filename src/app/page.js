@@ -38,10 +38,16 @@ const MEASURES = [
     now: '−20%',
   },
   {
-    what: 'Per-query LLM inference cost, after tracing where spend concentrated',
-    src: 'MyEdmaster · complexity-based model routing',
-    was: '$0.024',
-    now: '$0.0044',
+    what: 'Per-query inference cost, after tracing where spend concentrated',
+    src: 'Current role · complexity-based model routing',
+    was: 'baseline',
+    now: '−82%',
+  },
+  {
+    what: 'Partial vendor deliveries processed as complete runs, caught and closed',
+    src: 'EXL \u00b7 custom Airflow sensor replacing a stock key sensor',
+    was: 'silent',
+    now: 'zero',
   },
   {
     what: 'Manual executive reporting, replaced with scheduled SQL and shell',
@@ -51,6 +57,33 @@ const MEASURES = [
 ];
 
 const JOBS = [
+  {
+    company: 'MyEdmaster',
+    badge: 'Current',
+    title: 'Software Engineer',
+    when: 'Jan 2026 \u2013 Present',
+    where: 'Tempe, AZ',
+    ctx: 'Started as the capstone engineer on the platform, stayed on to build it for production. Details of the product are under NDA.',
+    points: [
+      'Leading the migration onto AWS: document storage to <b>S3</b>, model inference to <b>Bedrock</b>, the service layer onto <b>EKS</b> with processing workloads on <b>ECS</b>.',
+      'Built the document ingestion and embedding pipeline that processes 5,000 documents into <b>200K+ metadata-tagged vector chunks</b> in Qdrant, and now scale it as the corpus grows.',
+      'Cut per-query inference cost <b>82%</b> by tracing execution to find where spend concentrated, then routing by query complexity rather than capping usage.',
+      'Hardening it for production: pytest coverage, a structured logging layer across ingestion and retrieval, and answer-quality benchmarking so changes are measured before release.',
+    ],
+  },
+  {
+    company: 'Arizona State University',
+    badge: null,
+    title: 'Graduate Researcher, Power Analytics Lab',
+    when: 'Jun \u2013 Jul 2026',
+    where: 'Tempe, AZ',
+    ctx: 'Research position under Prof. Anamitra Pal, grounding LLMs in power systems domain knowledge.',
+    points: [
+      'Built the ingestion and chunking layer over 11 NERC reliability standards and power-systems papers, writing <b>rule-based chunkers tuned to NERC numbered-requirement structure</b> rather than a generic splitter, producing 469 metadata-tagged chunks.',
+      'Benchmarked embedding models, selected <b>bge-small-en-v1.5</b>, and built a <b>FAISS</b> cosine-similarity index with top-k search and domain filtering.',
+      'Ran an 18-question retrieval evaluation and <b>documented four reproducible failure modes</b> rather than reporting only what worked.',
+    ],
+  },
   {
     company: 'EXL Services',
     badge: null,
@@ -62,6 +95,8 @@ const JOBS = [
       'Owned the lakehouse behind products serving 500K+ users: S3 and Apache Iceberg ingestion, a <b>dbt</b> transformation layer, and curated <b>Snowflake</b> tables analysts queried directly. Made the table layout and partitioning calls that set read throughput.',
       "Cut a <b>100M+ record PySpark pipeline's runtime 66%</b> on AWS Glue and EMR by profiling real execution to find a single 90-minute bottleneck, rather than guessing at it.",
       'Built a <b>Kafka and Spark Structured Streaming feature store</b> on Iceberg feeding SageMaker, serving features continuously instead of nightly and cutting model deployment cycles 58%.',
+      'Rebuilt the nightly <b>Airflow</b> DAG orchestrating eight PySpark-on-Glue jobs across claims, policy, vehicle and driver domains, restructuring a fully sequential chain so the five independent tasks ran in parallel.',
+      'Replaced the stock S3 key sensor after finding it fired on the first file of a multi-file vendor delivery, so Glue processed <b>partial batches as clean green runs</b>. Wrote a sensor that waits for the delivery to stop changing, polling in reschedule mode so a six-hour wait never holds a worker slot.',
       'Carried production ownership: Terraform with IAM and encryption controls, pytest-driven Jenkins CI/CD, CloudWatch alerting, and the on-call pager.',
       'Led design and code reviews for the pod, ran daily Scrum, mentored two junior engineers.',
     ],
@@ -115,8 +150,8 @@ const PROJECTS = [
     tag: '1st place · DEVHACKS 2026',
     win: true,
     wide: true,
-    body: 'Multi-agent orchestration on LangGraph that turns meeting transcripts into assigned, capacity-aware tickets. Analyses the transcript, checks team load, recommends reassignment for overloaded people, and notifies via Slack. Competed against 100+ teams.',
-    tech: 'LangGraph · Python · Taiga API · Slack · Streamlit',
+    body: 'An LLM pipeline that turns meeting transcripts into assigned, capacity-aware tickets. Analyses the transcript, checks team load, recommends reassignment for overloaded people, and notifies via Slack. Competed against 100+ teams.',
+    tech: 'Python · GPT-4o-mini · Taiga API · Slack · Streamlit',
   },
   {
     name: 'FairCharge',
@@ -135,12 +170,6 @@ const PROJECTS = [
     tag: 'Academic',
     body: "Multi-stage inference on Lambda, SQS and ECR with containerised PyTorch models. Asynchronous request and response queues decouple the stages, so a slow recognition step can't back-pressure ingestion when frame volume spikes.",
     tech: 'AWS Lambda · SQS · ECR · Docker · PyTorch',
-  },
-  {
-    name: 'MyEdmaster',
-    tag: 'ASU capstone',
-    body: 'A stateful multi-agent RAG platform on Django and LangGraph, 5,000 documents into 200K+ embeddings in Qdrant at sub-two-second query latency. Cut per-query cost 82% by tracing execution to find where spend concentrated, then routing by complexity.',
-    tech: 'LangGraph · Qdrant · FastAPI · LangSmith · Kubernetes',
   },
 ];
 
